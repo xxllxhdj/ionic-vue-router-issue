@@ -23,7 +23,7 @@ const toggle = ref(false);
 onMounted(() => {
   setTimeout(() => {
     toggle.value = true;
-  });
+  }, 100);
 });
 </script>
   
