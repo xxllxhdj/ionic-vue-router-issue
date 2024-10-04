@@ -1,5 +1,5 @@
 <template>
-    <ion-page>
+    <ion-page :class="{ 'xxx-cls': toggle }">
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
@@ -15,6 +15,15 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton } from '@ionic/vue';
+
+const toggle = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    toggle.value = true;
+  });
+});
 </script>
   
